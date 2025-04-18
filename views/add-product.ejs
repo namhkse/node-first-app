@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('includes/head.ejs') %>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .form-control {
+            width: 30rem;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            background-color: wheat;
+        }
+
+        .form-control label,
+        .form-control input {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .form-control input {
+            border: 1px solid #ccc;
+            width: 100%;
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    
+    <main>
+        <form class="form-control" action="/admin/product" method="POST">
+            <div>
+                <label for="title">Title:</label>
+                <input id="title" type="text" id="title" name="title" required>
+            </div>
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+</body>
+
+</html>
